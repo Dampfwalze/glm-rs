@@ -195,7 +195,7 @@ macro_rules! def_matrix {
     }), +) => {
         $(
             #[repr(C)]
-            #[derive(Copy, Clone, PartialEq, Debug)]
+            #[derive(Copy, Clone, PartialEq, Debug, Hash)]
             pub struct $t<T: BaseFloat> {
                 $(pub $field: $ct<T>), +
             }
