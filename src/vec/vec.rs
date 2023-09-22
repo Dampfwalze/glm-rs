@@ -54,7 +54,7 @@ macro_rules! def_genvec(
         $($field: ident),+  // list of field names (e.g., "x, y, z").
     ) => {
         #[repr(C)]
-        #[derive(Copy, Clone, PartialEq, Debug)]
+        #[derive(Copy, Clone, PartialEq, Debug, Hash)]
         pub struct $t<T: Primitive> {
             $(pub $field: T),+
         }
